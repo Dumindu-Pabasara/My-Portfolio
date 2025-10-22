@@ -1,0 +1,145 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+  margin: 80px 170px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-tittle {
+  position: relative;
+  text-align: center;
+}
+
+.contact-tittle h1 {
+  padding: 0 30px;
+  font-size: 80px;
+  font-weight: 600;
+}
+
+.contact-tittle img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.contact-section {
+  display: flex;
+  gap: 80px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* ---------- LEFT SIDE ---------- */
+.contact-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-left h1 {
+  font-size: 65px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  background: linear-gradient(264deg, #df8908 65.09%, #b415ff 106.28%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-left p {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #d8d8d8;
+  line-height: 1.6;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-detail img {
+  width: 28px;
+  height: 28px;
+  opacity: 0.8;
+}
+
+.contact-detail p {
+  font-size: 18px;
+  margin: 0;
+  color: white;
+}
+
+/* ---------- RIGHT SIDE FORM ---------- */
+.contact-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-right label {
+  font-weight: 500;
+}
+
+.contact-right input,
+.contact-right textarea {
+  background: #313030;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 16px;
+  padding: 12px 15px;
+  border-radius: 6px;
+}
+
+.contact-right button {
+  margin-top: 10px;
+  background: linear-gradient(264deg, #df8908 -5.09%, #b415ff 100%);
+  border: none;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+  transition: 0.3s;
+  padding: 25px 45px;
+  width: fit-content;
+}
+
+.contact-right button:hover {
+  transform: scale(1.05);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .contact {
+    margin: 60px 50px;
+  }
+
+  .contact-tittle h1 {
+    font-size: 55px;
+  }
+
+  .contact-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .contact-left h1 {
+    font-size: 50px;
+  }
+}

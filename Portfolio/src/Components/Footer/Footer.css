@@ -1,0 +1,30 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 50px 170px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+.footer-tittle{
+    position: relative;
+}
+.footer-tittle img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+.footer-tittle h2{
+    font-size: 40px;
+    font-weight: 600;
+
+}
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer-content2{
+    margin-bottom: 25px;
+}

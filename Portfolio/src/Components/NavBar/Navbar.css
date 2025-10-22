@@ -1,0 +1,140 @@
+/* navbar layout */
+.navbar{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 40px;
+  background: #111; /* dark bar */
+  height: 84px;
+  color: #fff;
+}
+
+/* left: logo */
+.nav-left { display:flex; align-items:center; gap:12px; }
+.logo-img { height:48px; display:block; }
+
+/* center: menu (perfectly centered using absolute) */
+.nav-menu{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+/* links */
+.nav-menu a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 6px 0;
+  transition: color .12s;
+  position: relative;
+}
+.navbar h2{
+  font-size: 40px;
+  font-weight: 700;
+}
+/* teardrop indicator (hidden by default) */
+.nav-menu a::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scale(0) rotate(25deg);
+  bottom: -14px;
+  width: 14px;
+  height: 10px;
+  border-radius: 40% 40% 60% 60% / 50% 50% 50% 50%;
+  background: linear-gradient(90deg, #d13be7 0%, #ff7a3d 100%);
+  transition: transform .14s ease;
+  filter: drop-shadow(0 4px 8px rgba(209,59,231,0.18));
+}
+
+/* active / hovered link shows indicator and subtle color change */
+.nav-menu a.active::after,
+.nav-menu a:hover::after{
+  transform: translateX(-50%) scale(1) rotate(25deg);
+}
+.nav-menu a:hover,
+.nav-menu a.active{
+  color: #e9e5ff;
+}
+
+/* right: gradient pill button */
+.nav-connect{
+  background: linear-gradient(90deg, #b923e1 0%, #f58b2f 100%);
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(185,35,225,0.14);
+  transition: 0.5s;
+}
+
+.nav-connect:hover{
+  transform: scale(1.05);
+} 
+.nav-menu li {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.nav-menu li img {
+  display: flex;
+  margin: auto;
+}
+.anchor-link {
+  text-decoration: none;
+  color: white;
+}
+.nav-mob-close{
+  display: none;
+}
+@media (max-width: 768px) {
+  .nav-menu {
+    margin: 20px 50px;
+  }
+  .nav-connect{
+    display: none;
+  }
+  .nav-mob-open {
+    display: block;
+    position: fixed;
+    right: 30px;
+  }
+  .nav-mob-close {
+    display: block;
+    position: relative;
+    top: 30px;
+    left: 290px;
+    width: 30px;
+  }
+  .nav-menu{
+    position: fixed;
+    flex-direction: column;
+    align-items: start;
+    top: 0;
+    gap: 30px;
+    background-color: #1f0016;
+    width: 350px;
+    height: 100%;
+    z-index: 2;
+    transition: right 0.5s;
+    right: -350px;
+  }
+  .nav-menu li{
+    font-size: 30px;
+    padding-left: 100px;
+    flex-direction: row;
+    gap: 20px;
+  }
+}
