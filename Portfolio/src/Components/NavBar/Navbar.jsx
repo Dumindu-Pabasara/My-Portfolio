@@ -1,10 +1,10 @@
 // ...existing code...
 import React, { useState, useRef } from 'react'
 import "./Navbar.css"
-import underline from "../../Assets/nav_underline.svg"
+import underline from "../../assets/nav_underline.svg"
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-import menu_open from "../../Assets/menu_open.svg"
-import menu_close from "../../Assets/menu_close.svg"
+import menu_open from "../../assets/menu_open.svg"
+import menu_close from "../../assets/menu_close.svg"
 
 const Navbar = () => {
 
