@@ -1,6 +1,6 @@
 
 import project6_img from '../assets/project_6.svg'
-import HotelWebsite from '../assets/Hotelwebsite.png'
+import HotelWebsite from '../assets/HotelWebsite.png'
 
 import travel from '../assets/travel.jpeg'
 import srilanka from '../assets/srilanka.png'
